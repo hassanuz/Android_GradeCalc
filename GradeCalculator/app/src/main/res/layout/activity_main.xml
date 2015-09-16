@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="#fff" tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView android:text="Grade Calculator " android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="33sp"
+            android:textAllCaps="true"
+            android:fontFamily="courier"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:id="@+id/title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="5sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="# of classes to be graded?"
+                android:id="@+id/cats"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:gravity="center"
+                android:ems="3"
+                android:id="@+id/num"
+                android:layout_toRightOf="@+id/cats"
+                android:typeface="serif"
+                android:layout_alignBottom="@+id/cats"
+                android:layout_toStartOf="@+id/button"
+                android:layout_toLeftOf="@+id/button"
+                android:elegantTextHeight="false" />
+
+
+        </LinearLayout>
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:text="Go!"
+            android:textSize="80sp"
+            android:padding="10sp"
+            android:background="#f0f0f0"
+            android:layout_margin="50sp"
+            android:layout_gravity="center"
+            android:id="@+id/button"
+            android:layout_alignTop="@+id/num"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:typeface="sans"
+            android:onClick="displayCategories"
+            />
+
+        <TextView
+            android:text="@string/hassan_dissapoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:fontFamily="courier"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView2"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_weight="2.04" />
+    </LinearLayout>
+</ScrollView>
